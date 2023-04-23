@@ -7,3 +7,9 @@ services:
     volumes:
       - ./next:/app
     command: npm run dev
+  nginx:
+    build: nginx
+    ports:
+      - 80:80
+    depends_on:
+      - next
